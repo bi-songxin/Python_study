@@ -26,8 +26,8 @@ page = bs(resp.text, 'html.parser')  # 指定html解析器
 # findall(标签，属性=属性值) 找全部符合条件的
 
 
-# 将tag对象通过text转化成字符串，进行处理
-title_name = page.find("title").text.strip()
+
+title_name = page.find("title")
 print(title_name)
 
 # page_content = page.find("div",class_="rich-content topic-richtext")  #class是py的关键字，这里使用class_
@@ -79,8 +79,7 @@ page = bs(resp.text,'html.parser') #指定html解析器
 #findall(标签，属性=属性值) 找全部符合条件的
 
 
-# 将tag对象通过text转化成字符串，进行处理
-title_name = page.find("title").text.strip().replace(' - 豆瓣','')
+title_name = page.find("title")
 print(title_name)
 
 # page_content = page.find("div",class_="rich-content topic-richtext")  #class是py的关键字，这里使用class_
